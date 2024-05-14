@@ -24,5 +24,18 @@ function encryptSha1() {
   console.log('SHA-1 Hash:', result);
 }
 
+function encryptSha2 () {
+  const data = 'Hello, World!';
+
+  const hash = crypto.createHash('sha256');
+
+  hash.update(data, 'utf8');
+
+  const result = hash.digest('hex');
+
+  console.log('SHA-256 Hash:', result);
+}
+
 encryptMd5();
 encryptSha1();
+encryptSha2();
