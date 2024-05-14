@@ -11,5 +11,8 @@
     "name": "Lucas Teles",
     "email": "dev.teles@outlook.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
 }
