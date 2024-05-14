@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import { SHA3 } from 'sha3';
 
 function encryptMd5() {
   const hash = crypto.createHash('md5');
@@ -36,6 +37,19 @@ function encryptSha2 () {
   console.log('SHA-256 Hash:', result);
 }
 
+function encryptSha3() {
+  const data = 'Hello, World!';
+
+  const hash = new SHA3(256);
+
+  hash.update(data);
+
+  const result = hash.digest('hex');
+
+  console.log('SHA3-256 Hash:', result);
+}
+
 encryptMd5();
 encryptSha1();
 encryptSha2();
+encryptSha3();
