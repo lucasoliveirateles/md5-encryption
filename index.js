@@ -1,10 +1,10 @@
 import crypto from 'crypto';
 import { SHA3 } from 'sha3';
 
+const data = 'Hello, world!';
+
 function encryptMd5() {
   const hash = crypto.createHash('md5');
-
-  const data = 'Hello, world!';
 
   hash.update(data);
 
@@ -14,7 +14,6 @@ function encryptMd5() {
 }
 
 function encryptSha1() {
-  const data = 'Hello, World!';
 
   const hash = crypto.createHash('sha1');
 
@@ -26,7 +25,6 @@ function encryptSha1() {
 }
 
 function encryptSha2 () {
-  const data = 'Hello, World!';
 
   const hash = crypto.createHash('sha256');
 
@@ -38,7 +36,6 @@ function encryptSha2 () {
 }
 
 function encryptSha3() {
-  const data = 'Hello, World!';
 
   const hash = new SHA3(256);
 
